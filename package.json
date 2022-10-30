@@ -1,15 +1,10 @@
 
-// my-app.js, treated as an ES module because there is a package.json
-// file in the same folder with "type": "module".
 
-import './app.js';
-// Loaded as ES module since ./startup contains no package.json file,
-// and therefore inherits the "type" value from one level up.
+
+import './startup/app.js';
+
 
 import 'commonjs-package';
-// Loaded as CommonJS since ./node_modules/commonjs-package/package.json
-// lacks a "type" field or contains "type": "commonjs".
+
 
 import './node_modules/commonjs-package/app.js';
-// Loaded as CommonJS since ./node_modules/commonjs-package/package.json
-// lacks a "type" field or contains "type": "commonjs".
